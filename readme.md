@@ -16,7 +16,7 @@
 
 <img src="https://cdn.discordapp.com/attachments/810047161664143383/848020271771418624/unknown.png" alt="Slime Control" style="zoom:80%;" />
 
-슬라임을 컨프롤 패널에서 관리할 수 있습니다.
+슬라임을 컨트롤 패널에서 관리할 수 있습니다.
 
 우측 하단은 타입과 메세지로 수동관리 할수있는 패널입니다.
 
