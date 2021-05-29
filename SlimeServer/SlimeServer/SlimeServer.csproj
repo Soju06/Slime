@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{23D408E9-1403-47D2-8A51-B440BE907C0A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SlimeServer</RootNamespace>
+    <AssemblyName>SlimeServer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CreateControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CreateControl.Designer.cs">
+      <DependentUpon>CreateControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JsonSetting.cs" />
+    <Compile Include="SocketServer\DataProtocol.cs" />
+    <Compile Include="Explorer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Explorer.Designer.cs">
+      <DependentUpon>Explorer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileInfoForm.Designer.cs">
+      <DependentUpon>FileInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Get\GetPathForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Get\GetPathForm.Designer.cs">
+      <DependentUpon>GetPathForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Get\GetUrlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Get\GetUrlForm.Designer.cs">
+      <DependentUpon>GetUrlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NodeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NodeView.Designer.cs">
+      <DependentUpon>NodeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SelectControl.Designer.cs">
+      <DependentUpon>SelectControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServerLogControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ServerLogControl.Designer.cs">
+      <DependentUpon>ServerLogControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SlimeRemoteControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SlimeRemoteControl.Designer.cs">
+      <DependentUpon>SlimeRemoteControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SocketServer\Group.cs" />
+    <Compile Include="SocketServer\Server.cs" />
+    <Compile Include="Slime.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Slime.Designer.cs">
+      <DependentUpon>Slime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SlimesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SlimesControl.Designer.cs">
+      <DependentUpon>SlimesControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CreateControl.resx">
+      <DependentUpon>CreateControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Explorer.resx">
+      <DependentUpon>Explorer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileInfoForm.resx">
+      <DependentUpon>FileInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Get\GetPathForm.resx">
+      <DependentUpon>GetPathForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Get\GetUrlForm.resx">
+      <DependentUpon>GetUrlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NodeView.resx">
+      <DependentUpon>NodeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SelectControl.resx">
+      <DependentUpon>SelectControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServerLogControl.resx">
+      <DependentUpon>ServerLogControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Slime.resx">
+      <DependentUpon>Slime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlimeRemoteControl.resx">
+      <DependentUpon>SlimeRemoteControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlimesControl.resx">
+      <DependentUpon>SlimesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
